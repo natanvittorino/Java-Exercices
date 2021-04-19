@@ -1,30 +1,19 @@
 package com.company;
 
-import java.util.Scanner;
-/*
-1. Faça um algoritmo que leia a idade de uma pessoa expressa em anos, meses e dias e
-mostre-a expressa em dias. Leve em consideração o ano com 365 dias e o mês com 30.
-(Ex: 3 anos, 2 meses e 15 dias = 1170 dias.)*/
-
 public class Main {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Please tell me age in years: ");
-        int ageInYears = scanner.nextInt();
-        int result = ageInYears;
-        System.out.println("");
+	bankAccount natansAccount = new bankAccount("AIBK274578589 8909 90888", 0.00,
+			"Natan Alves", "natanbreakman11ie@gmail.com", "+55 85 988637346" );
 
 
-        int monthResult = 12 * ageInYears;
-        System.out.println("");
+	natansAccount.withdrawal(100.0);
 
+	natansAccount.deposit(50.0);
+	natansAccount.withdrawal(100.0);
 
-        int resultBirthday = 365 * ageInYears;
-        System.out.println("");
-
-        System.out.println(ageInYears + " " + "years" + " " + monthResult + " " + "months" + " " + resultBirthday + " " + "days");
-
+	natansAccount.deposit(51.0);
+	natansAccount.withdrawal(100.0);
     }
 }
